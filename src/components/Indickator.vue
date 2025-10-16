@@ -111,7 +111,6 @@ onMounted(() => {
   stroke-linecap: round;
 }
 
-/* Default indickator colors */
 .stroke-indickator {
   stroke: var(--color-indickator, oklch(0.91 0.09 73.95));
 }
@@ -120,7 +119,6 @@ onMounted(() => {
   fill: var(--color-indickator, oklch(0.91 0.09 73.95));
 }
 
-/* Override with primary/secondary colors when active */
 .fill-primary {
   fill: var(--color-primary, oklch(0.71 0.14 194.06)) !important;
 }
