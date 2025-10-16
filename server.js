@@ -20,7 +20,7 @@ const server = Bun.serve({
       })
     }
 
-    if (path === '/api/download') {
+    if (path === '/download') {
       const ckSize = parseInt(url.searchParams.get('ckSize')) || 100
       const size = ckSize * 1024
       const randomData = crypto.randomBytes(size)
@@ -36,7 +36,7 @@ const server = Bun.serve({
       })
     }
 
-    if (path === '/api/upload' || path === '/api/ping') {
+    if (path === '/upload' || path === '/ping') {
       if (req.method === 'POST') {
         await req.arrayBuffer()
       }
@@ -51,7 +51,7 @@ const server = Bun.serve({
       })
     }
 
-    if (path === '/api/ip') {
+    if (path === '/ip') {
       const clientIP =
         req.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
         req.headers.get('x-real-ip') ||
